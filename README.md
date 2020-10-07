@@ -1,9 +1,9 @@
 ## Project 7 OPENCLASSROOMS - Implement a scoring model
 
-The purpose of this project is to assess the risk of a client's default before granting credit. 
+The purpose of this project is to assess the risk of a client's default before granting credit.  
 Source of data : https://www.kaggle.com/c/home-credit-default-risk/data
 
-Based on the given dataset, we will attribute for each new client a probability of default from 0 to 1 (1 corresponds to the maximum risk).  
+Based on the given dataset, we will attribute for each new client a probability of default from 0 to 1 (1 corresponds to the maximum risk).   
 The final result should be presented on an interactive online-dashboard, with the possibility to :
 - visualize descriptive information related to a client (via a filter system).
 - visualize the score and its interpretation in an intelligible way for a person unfamiliar with data science.
@@ -11,13 +11,13 @@ The final result should be presented on an interactive online-dashboard, with th
 
 ### Imbalanced Classification
 
-It's an imbalanced classification problem, as only 8% of the customers from the provided dataset went bankrupt.
+It's an imbalanced classification problem, as only 8% of the customers from the provided dataset went bankrupt.  
 For each model, we will try and evaluate different strategies to rebalance classes (weighting, SMOTE, random undersampling)
 
 ### Custom Metric
 
-The models will be evaluated using a metric adapted to the business problem.
-In this case, granting a loan to an insolvent customer (False negative, type II Error) will lead to a much greater loss than refusing a loan to a solvent customer (False positive, type I Error).
+The models will be evaluated using a metric adapted to the business problem.  
+In this case, granting a loan to an insolvent customer (False negative, type II Error) will lead to a much greater loss than refusing a loan to a solvent customer (False positive, type I Error).  
 We then determine the threshold that maximizes the metric, based on the probabilities a posteriori.
 
 ### Models
@@ -30,7 +30,7 @@ I used the library SHAP (https://shap.readthedocs.io/) to interpret the predicti
 
 ### Dashboard
 
-I built an interactive Dashboard on Streamlit. 
-The data (customer information and result of the prediction) is collected via an API developed on Flask.
+I built an interactive Dashboard on Streamlit.  
+The data (customer information and result of the prediction) is collected via an API developed on Flask.  
 The Dashboard is currently running on heroku at this URL: https://dashboard-marie.herokuapp.com/
 
